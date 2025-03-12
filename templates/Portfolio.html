@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,6 +10,7 @@
         *{
             padding: 0%;
             margin: 0%;
+            font-family:Georgia, 'Times New Roman', Times, serif;
         }
         #nav_bar{
             max-width: 100%;
@@ -42,6 +44,35 @@
             background-color: orange;
 
         }
+        #about_me{
+            /* border: 1px solid black; */
+            max-width: 100%;
+            height: 40vh;
+            position: relative;
+            top: 20px;
+        }
+        .name{
+            /* border: 1px solid black; */
+            max-width: max-content;
+            position: absolute;
+            top: 60px;
+            left: 160px;
+        }
+        #my_pic{
+            /* border: 1px solid red; */
+            position: relative;
+            width:220px;
+            left: 1080px;
+            top: 24px;
+            height: 30vh;
+            border-radius: 340px;
+            background-image: url("/static/img/me.jpg"); 
+            background-repeat: no-repeat;
+            background-position:top ;
+            background-size: cover;
+            box-shadow: 0 4px 20px 0 orange;
+
+        }
     </style>
 </head>
 <body>
@@ -56,6 +87,22 @@
         </ul>
       </div>
       <hr>
+      <div id="about_me">
+        <div class="name">
+            <h2 style="color: rgba(0, 0, 0, 0.527);">Hi, my name is</h2><br>
+            <h1 style="color: orange;">Muppala Chethan Raju</h1><br>
+            <p style="color: rgba(0, 0, 0, 0.66);">Having a Bachelor’s Degree in Computer Science and Engineering with a strong foundation in Python Full 
+                Stack Development. <br>
+                 Passionate about solving complex problems and building efficient, scalable solutions.  
+                Seeking an entry-level role to apply<br>my expertise in Python, SQL, HTML, CSS, JavaScript, Bootstrap, and 
+                Django to develop innovative and impactful applications. </p>
+        </div>
+        <div id="my_pic">
+            <!-- <img src="{% static 'img/me.jpg' %}" alt="hi" width="100%"> -->
+        
+
+        </div>
+      
  
 </body>
 </html>
